@@ -33,13 +33,15 @@
     createApp({
       data() {
         return {
-          message: 'Welcome to the Dog Walking Service!'
+          message: 'Welcome to the Dog Walking Service!',
+          username: '',
+          password: ''
 
         };
       },
       methods:{
         async login(){
-          this.error = '';
+          // this.error = '';
           const res = await fetch('/api/users/login'),{
             method: 'POST',
             body:JSON stringify({
