@@ -47,7 +47,10 @@
             })
           }
         const data = await res.json();
-        this.dogImage = data.message;
+        const role = data.user.role;
+        if (role == 'owner'{
+          window.loca
+        })
         }
       }
     }).mount('#app');
