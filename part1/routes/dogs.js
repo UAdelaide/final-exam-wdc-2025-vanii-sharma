@@ -7,3 +7,5 @@ router.get('/tables', async(req, res) => {
 `);
     res.json(rows);
 });
+
+module.exports = router;
