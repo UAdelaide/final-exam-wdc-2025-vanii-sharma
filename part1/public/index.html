@@ -25,7 +25,7 @@
     async fetchDog() {
     const url = `https://dog.ceo/api/breeds/image/random`;
     try {
-        const res = await fetch(url);
+        const res = await fetch('https://dog.ceo/api/breeds/image/random');
         const data = await res.json();
 
         // Return the entire results object (all countries)
