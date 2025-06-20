@@ -7,9 +7,9 @@ router.get('/dogs', async(req, res) => {
     const [rows]= await db.query(`SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username
          FROM Dogs JOIN Users ON Dogs.owner_id = Users.user_id WHERE Users.role = 'owner';
 `);
-    res.status(200).json(rows);
+    res.json(books);
     }catch (err) {
-    console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
+    res.status(500).json({ error: 'Failed to fetch dogs' });
   }
 });
 
