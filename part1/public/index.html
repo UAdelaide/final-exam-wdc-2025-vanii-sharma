@@ -10,6 +10,27 @@
 </div>
 
 <script>
+
+
+  const {createApp} = Vue;
+
+  createApp({
+    data() {
+      return {
+       list: ['WELCOME', 'TO', 'VUE']
+      }
+    },
+    methods:{
+      add(event){
+        this.list.push('another');
+      }
+    }
+  }).mount('#app');
+
+
+
+
+
     async function fetchDog(movieId) {
     const url = `https://dog.ceo/api/breeds/image/random`;
     try {
