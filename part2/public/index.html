@@ -13,6 +13,8 @@
     <h1 class="mb-4 text-primary">{{ message }}</h1>
     <p class="lead">Connect with trusted walkers for your beloved dog!</p>
 
+
+    <form @submit.prevent = "log">
 <label> Username </label>
 <input type= "username" v-model="username" class= "form-control" required>
 
