@@ -18,6 +18,6 @@ router.get('/open', async(req, res) => {
   }
 });
 
-
+[{"dog_name":"Max","size":"medium","owner_username":"alice123"},
 
 module.exports = router;
