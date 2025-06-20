@@ -14,7 +14,7 @@ let dbConnectionPool;
     // Connect to MySQL without specifying a database
       dbConnectionPool = mysql.createPool({
 socketPath: '/var/run/mysqld/mysqld.sock',
-host: '127.0.0.1',
+host: 'localhost',
 user: 'root',
 password: ''
 database: 'DogWalkService'
