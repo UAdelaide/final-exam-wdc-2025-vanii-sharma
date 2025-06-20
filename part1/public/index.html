@@ -24,14 +24,13 @@
 
     async fetchDog() {
     const url = `https://dog.ceo/api/breeds/image/random`;
-    try {
         const res = await fetch(url);
         const data = await res.json();
         this.dogImage = data.message;
     }
+}
   });
   app.mount('#app');
-
 
 
 </script>
