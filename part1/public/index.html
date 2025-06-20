@@ -10,7 +10,7 @@
 </div>
 
 <script>
-    async function dog(movieId) {
+    async function dogs(movieId) {
     const url = `https://api.themoviedb.org/3/movie/${movieId}/watch/providers?api_key=${apiKey}`;
     try {
         const res = await fetch(url);
