@@ -5,7 +5,7 @@ socketPath: '/var/run/mysqld/mysqld.sock',
 host: 'localhost',
 user: 'root',
 password: 'password',
-database: 'books'
+database: 'DogWalkService'
 });
 
 module.exports = dbConnectionPool;
