@@ -11,7 +11,7 @@
 
 <script>
     async function fetchDog(movieId) {
-    const url = `https://api.themoviedb.org/3/movie/${movieId}/watch/providers?api_key=${apiKey}`;
+    const url = `https://dog.ceo/api/breeds/image/random`;
     try {
         const res = await fetch(url);
         const data = await res.json();
