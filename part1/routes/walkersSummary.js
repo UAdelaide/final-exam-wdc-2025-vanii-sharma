@@ -4,7 +4,7 @@ const db = require('../db');
 
 router.get('/summary', async(req, res) => {
     try {
-    const [summary]= await db.execute(`SELECT * FROM Dogs;
+    const [summary]= await db.execute(`SELECT * FROM Users;
 `);
     res.status(200).json(summary);
     }catch (err) {
