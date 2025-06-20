@@ -32,5 +32,5 @@ let db;
   }
 })();
 
-module.exports = dbConnectionPool;
+module.exports = db;
 
