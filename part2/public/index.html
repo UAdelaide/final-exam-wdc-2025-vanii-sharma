@@ -39,7 +39,9 @@
       methods:{
         async login(){
           this.error = '';
-          const url = await fetch('')
+          const url = await fetch('/api/users/login'),{
+            method: 'POST'
+          }
         const res = await fetch(url);
         const data = await res.json();
         this.dogImage = data.message;
