@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../db');
 
-router.get('/api/walkrequests/open', async(req, res) => {
+router.get('/open', async(req, res) => {
     try {
     const [open]= await db.execute(`SELECT WalkRequests.request_id, Dogs.name AS dog_name,
          WalkRequests.requested_time, WalkRequests.duration_minutes, WalkRequests.location,

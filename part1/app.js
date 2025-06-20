@@ -22,9 +22,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/', dogsRouter);
-app.use('/', walkRequestsOpenRouter);
-app.use('/', walkersSummaryRouter);
+app.use('/api', dogsRouter);
+app.use('/api/walkrequests', walkRequestsOpenRouter);
+app.use('/api/walkers', walkersSummaryRouter);
 
 
 module.exports = app;
