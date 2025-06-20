@@ -5,7 +5,7 @@ const db = require('../db');
 router.get('/summary', async(req, res) => {
     try {
     const [summary]= await db.execute(`SELECT
-    Users.username,
+    Users.username AS walker_username,
     COUNT(WalkRatings.rating) AS total_ratings,
     AVG(WalkRatings.rating) AS average_rating,
     (
