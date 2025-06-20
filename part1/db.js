@@ -16,7 +16,7 @@ let dbConnectionPool;
 socketPath: '/var/run/mysqld/mysqld.sock',
 host: 'localhost',
 user: 'root',
-password: ''
+password: '',
 database: 'DogWalkService'
     });
     // // Now connect to the created database
