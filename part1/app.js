@@ -10,13 +10,6 @@ var dogsRouter = require('./routes/dogs');
 
 var app = express();
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-
-
 let db;
 
 (async () => {
@@ -78,6 +71,15 @@ app.get('/', async (req, res) => {
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api', dogsRouter);
+
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 module.exports = app;
 
