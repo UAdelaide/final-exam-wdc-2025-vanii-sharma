@@ -75,7 +75,16 @@
             message.value = '';
           }
         }
-
+async function logout() {
+          try {
+            const res = await fetch('/api/users/logout', { method: 'POST' });
+            if (!res.ok) throw new Error('Logout failed');
+            alert('Logged out!');
+            window.location.href = '/';
+          } catch (err) {
+            alert('Logout failed');
+          }
+        }
         onMounted(() => {
           loadWalkRequests();
         });
