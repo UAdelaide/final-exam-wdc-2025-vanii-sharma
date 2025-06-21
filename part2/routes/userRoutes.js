@@ -38,10 +38,11 @@ router.get('/me', (req, res) => {
 
 // POST login (dummy version)
 router.post('/login', async (req, res) => {
-  //change 
+  //changed the email to username
   const {username, password } = req.body;
 
   try {
+    //changed
     const [rows] = await db.query(`
       SELECT user_id, username, password_hash, role FROM Users
       WHERE username = ?
