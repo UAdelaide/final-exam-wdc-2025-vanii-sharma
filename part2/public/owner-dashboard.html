@@ -141,8 +141,9 @@ async function logout(){
       }
     }
 
+    //array for dog names
     const dogs = ref([]);
-
+// function to fetch dog names
     async function dogNames(){
       try{
         const res = await fetch('/api/walks/dogs');
