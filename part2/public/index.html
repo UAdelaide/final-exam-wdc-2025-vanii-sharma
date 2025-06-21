@@ -45,7 +45,7 @@
           try{
           const res = await fetch('/api/users/login',{
             method: 'POST',
-            header:{'Content-Type': 'application/json'}
+            header:{'Content-Type': 'application/json'},
             body:JSON.stringify({
               username: this.username,
               password: this.password
