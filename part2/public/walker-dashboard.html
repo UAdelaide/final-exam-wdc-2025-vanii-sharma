@@ -11,6 +11,8 @@
 <body class="bg-light">
   <div id="app" class="container py-4">
     <h1 class="mb-4 text-success">Walker Dashboard</h1>
+     <button id="logoutBtn" class="btn btn-outline-danger" type="button" @click="logout">Log Out</button>
+
 
     <!-- Alert messages -->
     <div v-if="message" class="alert alert-info">{{ message }}</div>
@@ -29,7 +31,6 @@
               <strong>Owner:</strong> {{ walk.owner_name }}
             </p>
             <button type=button class="btn btn-outline-success" @click="applyToWalk(walk.request_id)">Apply</button>
-            <button id="logoutBtn" class="btn btn-outline-danger" type="button" @click="logout">Log Out</button>
 
           </div>
         </div>
