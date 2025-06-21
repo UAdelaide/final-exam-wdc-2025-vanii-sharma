@@ -68,6 +68,7 @@ req.session.user = {
 
 router.post('/logout', (req,res)=> {
 delete req.session.user;
+res.clearCookie('connect.sid')
 res.sendStatus(200);
 });
 
