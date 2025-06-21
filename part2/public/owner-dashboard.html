@@ -153,7 +153,7 @@ async function logout(){
 
     const dogs = ref([]);
 
-    async function loadDogs(){
+    async function dogNames(){
       try{
         const res = await fetch('/api/users/dogs');
         dogs.value = await res.json();
@@ -164,6 +164,7 @@ async function logout(){
 
         onMounted(() => {
           loadWalks();
+          dogNames();
         });
 
         return {
@@ -173,7 +174,8 @@ async function logout(){
           error,
           submitWalkRequest,
           //added to list
-          logout
+          logout,
+          dogNames
         };
       },
 
