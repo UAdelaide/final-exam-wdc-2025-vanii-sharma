@@ -67,15 +67,14 @@ req.session.user = {
 
 //POST logout
 //deletes cookies, ends session
-router.post('/logout', (req,res) => {
+router.post('/logout', (req, res) => {
   req.session.destroy(err => {
     if (err) {
-      return res.status(500);
+      return res.status(500).json({ error: 'Logout failed' });
     }
-res.clearCookie('connect.sid')
-res.sendStatus(200);
-});
-
+    res.clearCookie('connect.sid');
+    return res.sendStatus(200);
+  });
 });
 
 module.exports = router;
