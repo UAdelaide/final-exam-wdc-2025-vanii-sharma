@@ -40,7 +40,9 @@ router.get('/me', (req, res) => {
 // POST login (dummy version)
 router.post('/login', async (req, res) => {
   // changed the email to username
-  const {username, password } = req.body;
+  const{
+  username, password
+} = req.body;
 
   try {
     const [rows] = await db.query(`
@@ -53,7 +55,7 @@ router.post('/login', async (req, res) => {
     }
 
     const user = rows[0];
-    //if logged in successfull, store in session
+    // if logged in successfull, store in session
     req.session.user = {
       user_id: user.user_id,
       username: user.username,
@@ -66,8 +68,8 @@ router.post('/login', async (req, res) => {
   }
 });
 
-//POST logout
-//deletes cookies, ends session
+// POST logout
+// deletes cookies, ends session
 router.post('/logout', (req, res) => {
   req.session.destroy((err) => {
     if (err) {
