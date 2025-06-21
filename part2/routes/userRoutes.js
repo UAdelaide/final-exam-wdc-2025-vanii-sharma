@@ -18,7 +18,6 @@ router.post('/register', async (req, res) => {
   const { username, email, password, role } = req.body;
 
   try {
-    const password = await bcrypt.hash(password,10);
     const [result] = await db.query(`
       INSERT INTO Users (username, email, password_hash, role)
       VALUES (?, ?, ?, ?)
@@ -51,7 +50,7 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
 
-    const user = rows[0];
+    conset user = rows[0];
 
 req.session.user = {
       user_id: user.user_id,
