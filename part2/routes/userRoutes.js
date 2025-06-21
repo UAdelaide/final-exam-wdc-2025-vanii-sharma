@@ -72,7 +72,6 @@ router.post('/logout', (req,res)=> {
     if (err) {
       return res.status(500);
     }
-  }
 res.clearCookie('connect.sid')
 res.sendStatus(200);
 });
