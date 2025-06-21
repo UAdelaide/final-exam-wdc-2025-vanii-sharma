@@ -37,7 +37,11 @@ router.post('/', async (req, res) => {
 
 
 router.get('/dogs', async(req,res)=>{
-  const 
+
+
+  try{
+    const [dogs]
+  }
 
 });
 
