@@ -18,6 +18,7 @@ router.post('/register', async (req, res) => {
   const { username, email, password, role } = req.body;
 
   try {
+    const password
     const [result] = await db.query(`
       INSERT INTO Users (username, email, password_hash, role)
       VALUES (?, ?, ?, ?)
@@ -59,7 +60,7 @@ req.session.user = {
     };
     res.json({ message: 'Login successful', user: req.session.user });
   } catch (error) {
-    console.error('login error: ', error)
+    console.error('login error: ', error);
     res.status(500).json({ error: 'Login failed' });
   }
 });
