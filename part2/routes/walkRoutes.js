@@ -41,7 +41,8 @@ router.get('/dogs', async(req,res)=>{
 
   try{
     const [dogs] = await db.execute(`
-      SELECT 
+      SELECT Dogs.name FROM Dogs WHERE owner_id = ?', 
+      []
       `)
   }
 
