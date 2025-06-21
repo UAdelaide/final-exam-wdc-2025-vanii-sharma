@@ -65,4 +65,7 @@ req.session.user = {
   }
 });
 
+
+route.post('/logout')
+
 module.exports = router;
