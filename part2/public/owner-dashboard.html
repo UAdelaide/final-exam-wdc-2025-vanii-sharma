@@ -156,8 +156,9 @@ async function logout(){
     async function loadDogs(){
       try{
         const res = await fetch('/api/users/dogs');
+        dogs.value = await res
       } catch (err){
-        error.value= er
+        error.value= err.message;
       }
     }
 
