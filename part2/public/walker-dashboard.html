@@ -78,7 +78,16 @@
           }
         }
 
-        async function getU
+        async function getUserId() {
+          try {
+            const res = await fetch('/api/users/me');
+            const data = await res.json();
+            return data.id;
+          } catch (err) {
+            console.error(err);
+            return null;
+          }
+        }
 //vue function for the log out button
         async function logout(){
         try{
