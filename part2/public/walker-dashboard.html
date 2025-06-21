@@ -80,7 +80,7 @@
             message.value = '';
           }
         }
-<!---->
+//log out function for
         async function logout(){
         try{
           const res = await fetch('/api/users/logout',{
@@ -88,7 +88,6 @@
             });
 
        alert("Logout Successful");
-      //  window.location.reload();
        window.location.href = '/';
 
       } catch(err){
