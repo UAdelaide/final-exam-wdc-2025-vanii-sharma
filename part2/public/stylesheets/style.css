@@ -154,10 +154,3 @@ textarea {
 section {
     display: none;
 }
-
-
-#logoutBtn {
-  position: absolute;
-  top: 20px;   /* adjust */
-  right: 20px; /* adjust */
-}
