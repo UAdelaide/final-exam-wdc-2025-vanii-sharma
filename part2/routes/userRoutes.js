@@ -67,7 +67,8 @@ req.session.user = {
 
 
 route.post('/logout', (req,res)=> {
-delete req.session.user
+delete req.session.user;
+res.send();
 });
 
 module.exports = router;
