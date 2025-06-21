@@ -67,18 +67,18 @@ window.location.href = "walker-dashboard.html";
         this.error = "server error";
       }}},
 
-      async logout(){
-        try{
-          const res = await fetch('/api/users/logout',{
-            method: 'POST'
-            });
+      // async logout(){
+      //   try{
+      //     const res = await fetch('/api/users/logout',{
+      //       method: 'POST'
+      //       });
 
-       alert("out!");
-       window.location.reload
-        }
-      } catch(err){
-        alert ("Logout Failed");
-      }
+      //  alert("out!");
+      //  window.location.reload
+      //   }
+      // } catch(err){
+      //   alert ("Logout Failed");
+      // }
 
     }).mount('#app');
   </script>
