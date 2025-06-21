@@ -66,6 +66,6 @@ req.session.user = {
 });
 
 
-route.post('/logout')
+route.post('/logout', (req,res)=)
 
 module.exports = router;
