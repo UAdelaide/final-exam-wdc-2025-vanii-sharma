@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
 });
 
 
-rou
+router.get('/dogs')
 
 // POST an application to walk a dog (from walker)
 router.post('/:id/apply', async (req, res) => {
