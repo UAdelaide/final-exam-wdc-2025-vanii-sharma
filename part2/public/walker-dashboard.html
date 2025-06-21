@@ -81,8 +81,11 @@
         async function getCurrentUser(){
           try{
             const res = await fetch('/api/users/me');
+            if (!res.ok) throw new Error('Failed to fetch current user');
+            const data = await res.json();
+            user = data.user_id;
           }
-        }
+        } 
 //vue function for the log out button
         async function logout(){
         try{
