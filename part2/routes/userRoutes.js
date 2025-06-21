@@ -67,8 +67,8 @@ req.session.user = {
 
 //POST logout
 //deletes cookies, ends session
-router.post('/logout', (req,res)=> {
-  req.session.destroy(err =>{
+router.post('/logout', (req,res) => {
+  req.session.destroy(err => {
     if (err) {
       return res.status(500);
     }
