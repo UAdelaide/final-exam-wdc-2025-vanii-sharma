@@ -23,6 +23,8 @@
       <div class="card-body">
         <form @submit.prevent="submitWalkRequest">
           <div class="mb-3">
+
+            //
             <label class="form-label">Select Your Dog</label>
             <select v-model="form.dog_id" class="form-control" required>
   <option disabled value="">--Choose a dog--</option>
@@ -161,7 +163,7 @@ async function logout(){
 
         return {
           form,
-
+//added dogs to the list
           dogs,
           walks,
           message,
