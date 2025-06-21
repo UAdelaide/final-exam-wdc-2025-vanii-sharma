@@ -17,13 +17,13 @@
 <!-- created a form to enter in the details of the user-->
     <form>
 <label> Username </label>
-<input id= "logoutBtn"type= "text" v-model="username" class= "form-control" required>
+<input type= "text" v-model="username" class= "form-control" required>
 
 <label> Password </label>
 <input type= "password" v-model="password" class= "form-control" required>
 
 <button type="button" @click="login"> Log In </button>
-<button type="button" @click="logout">Log Out</button>
+<button id= "logoutBtn" type="button" @click="logout">Log Out</button>
 
     </form>
     <a href="owner-dashboard.html" class="btn btn-outline-primary me-2">Owner Dashboard</a>
