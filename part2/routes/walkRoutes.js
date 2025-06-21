@@ -45,7 +45,8 @@ router.get('/dogs', async(req,res)=>{
 
    res.status(201).json(dogs);
   } catch (error){
-    res.status(500).json({ error: 'Failed to fetch users' });
+    console.error(error);
+    res.status(500).json({ error: 'Failed to fetch dogs' });
   }
 
 });
