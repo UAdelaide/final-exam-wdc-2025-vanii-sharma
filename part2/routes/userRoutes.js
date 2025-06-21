@@ -68,11 +68,10 @@ req.session.user = {
 
 router.post('/logout', (req,res)=> {
   req.session.destroy(err =>
-    
-  )
-delete req.session.user;
 res.clearCookie('connect.sid')
 res.sendStatus(200);
+  )
+
 });
 
 module.exports = router;
