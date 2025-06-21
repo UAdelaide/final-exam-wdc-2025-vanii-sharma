@@ -66,7 +66,7 @@ req.session.user = {
 });
 
 //POST logout
-//dele
+//deletes cookies, ends session
 router.post('/logout', (req,res)=> {
   req.session.destroy(err =>{
     if (err) {
