@@ -43,7 +43,7 @@ router.get('/dogs', async(req,res)=>{
       `
     ,[owner_id]);
 
-   res.status(201).json({ request_id: dogs.insertId });
+   res.status(201).json(dogs);
   } catch (error){
     res.status(500).json {error: 'No dog names'}
   }
