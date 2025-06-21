@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
 
 router.get('/dogs', async(req,res)=>{
 
-
+const {owner_id} = 
   try{
     const [dogs] = await db.execute(`
       SELECT Dogs.name FROM Dogs WHERE owner_id = ?',
