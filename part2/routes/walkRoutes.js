@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
 
 router.get('/dogs', async(req,res)=>{
 
-const {owner_id} = 
+const {owner_id} = req.body;
   try{
     const [dogs] = await db.execute(`
       SELECT Dogs.name FROM Dogs WHERE owner_id = ?',
@@ -46,6 +46,8 @@ const {owner_id} =
     ,[owner_id]);
 
    res.status(201).json({ request_id: dogs.insertId });
+  } catch (error){
+    res.status(500)
   }
 
 });
