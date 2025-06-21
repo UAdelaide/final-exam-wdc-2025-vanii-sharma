@@ -14,14 +14,14 @@
     <p class="lead">Connect with trusted walkers for your beloved dog!</p>
 
 
-    <form>
+    <form @s>
 <label> Username </label>
 <input type= "text" v-model="username" class= "form-control" required>
 
 <label> Password </label>
 <input type= "password" v-model="password" class= "form-control" required>
 
-<button type="submit" @onclick= "login"> Log In </button>
+<button type="submit"> Log In </button>
 
     </form>
     <a href="owner-dashboard.html" class="btn btn-outline-primary me-2">Owner Dashboard</a>
