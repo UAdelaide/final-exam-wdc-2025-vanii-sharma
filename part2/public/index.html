@@ -65,7 +65,29 @@ window.location.href = "walker-dashboard.html";
         }
       } catch(err){
         this.error = "server error";
-      }}}
+      }}},
+
+      async logout(){
+        try{
+          const res = await fetch('/api/users/login',{
+            method: 'POST',
+            headers:{'Content-Type': 'application/json'},
+            body:JSON.stringify({
+              username: this.username,
+              password: this.password
+            })
+            });
+
+        const data = await res.json();
+        const role = data.user.role;
+        if (role == 'owner'){
+          window.location.href = "owner-dashboard.html";
+        } else if (role == 'walker'){
+window.location.href = "walker-dashboard.html";
+        }
+      } catch(err){
+        this.error = "server error";
+      }
 
     }).mount('#app');
   </script>
