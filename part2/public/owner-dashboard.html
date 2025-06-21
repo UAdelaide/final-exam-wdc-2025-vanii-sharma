@@ -154,7 +154,9 @@ async function logout(){
     const dogs = ref([]);
 
     async function loadDogs(){
-      try{}
+      try{
+        const res = await fetch('/api/users/dogs')
+      }
     }
 
         onMounted(() => {
