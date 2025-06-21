@@ -35,6 +35,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+//
 router.get('/dogs', async(req,res)=>{
   const owner_id = req.session.user?.user_id;
   try{
