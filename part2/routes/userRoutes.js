@@ -66,7 +66,7 @@ req.session.user = {
 });
 
 
-route.post('/logout', (req,res)=> {
+router.post('/logout', (req,res)=> {
 delete req.session.user;
 res.send();
 });
