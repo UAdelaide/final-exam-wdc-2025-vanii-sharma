@@ -14,8 +14,7 @@ router.get('/', async (req, res) => {
 
 // POST a new user (simple signup)
 router.post('/register', async (req, res) => {
-  const { username, email, password, role } = req.body;
-
+  const {username, email, password, role} = req.body;
   try {
     const [result] = await db.query(`
       INSERT INTO Users (username, email, password_hash, role)
@@ -37,7 +36,7 @@ router.get('/me', (req, res) => {
 
 // POST login (dummy version)
 router.post('/login', async (req, res) => {
-  //changed the email to username
+  // changed the email to username
   const {username, password } = req.body;
 
   try {
