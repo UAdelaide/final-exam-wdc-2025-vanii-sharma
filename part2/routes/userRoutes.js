@@ -75,7 +75,7 @@ router.post('/logout', (req,res)=> {
   }
 res.clearCookie('connect.sid')
 res.sendStatus(200);
-  )
+});
 
 });
 
