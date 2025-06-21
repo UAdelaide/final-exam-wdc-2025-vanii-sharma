@@ -85,7 +85,10 @@
             const data = await res.json();
             user = data.user_id;
           }
-        } 
+        catch (err) {
+            error.value = err.message;
+          }
+        }
 //vue function for the log out button
         async function logout(){
         try{
