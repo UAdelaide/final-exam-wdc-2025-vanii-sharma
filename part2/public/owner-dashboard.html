@@ -120,6 +120,20 @@
           }
         }
 
+             async logout(){
+        try{
+          const res = await fetch('/api/users/logout',{
+            method: 'POST'
+            });
+
+       alert("out!");
+      //  window.location.reload();
+       window.location.href = '/';
+
+      } catch(err){
+        alert ("Logout Failed");
+      }
+    }
         onMounted(() => {
           loadWalks();
         });
@@ -129,10 +143,11 @@
           walks,
           message,
           error,
-          submitWalkRequest
+          submitWalkRequest,
+          logout
         };
       },
-   
+
     }).mount('#app');
   </script>
 
