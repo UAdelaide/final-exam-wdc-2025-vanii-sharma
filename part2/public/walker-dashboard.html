@@ -29,6 +29,8 @@
               <strong>Owner:</strong> {{ walk.owner_name }}
             </p>
             <button type=button class="btn btn-outline-success" @click="applyToWalk(walk.request_id)">Apply</button>
+            <button id="logoutBtn" class="btn btn-outline-danger" type="button" @click="logout">Log Out</button>
+
           </div>
         </div>
       </div>
