@@ -35,21 +35,22 @@ router.post('/', async (req, res) => {
   }
 });
 
-
 router.get('/dogs', async(req,res)=>{
-  const owner_id =1;
+  const owner_id = 5;
   try{
-    const [dogs] = await db.execute(`
-      SELECT name FROM Dogs WHERE owner_id = ?
-      `
+    const [dogs] = await db.execute(
+      SELECT Dogs.name FROM Dogs WHERE owner_id = ?
+
     ,[owner_id]);
-   res.status(200).json(dogs);
+
+   res.status(201).json(dogs);
   } catch (error){
     console.error(error);
     res.status(500).json({ error: 'Failed to fetch dogs' });
   }
 
 });
+
 
 // POST an application to walk a dog (from walker)
 router.post('/:id/apply', async (req, res) => {
