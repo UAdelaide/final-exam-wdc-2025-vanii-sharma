@@ -35,10 +35,12 @@ router.post('/', async (req, res) => {
   }
 });
 
-//
+//get dogs from owner
 router.get('/dogs', async(req,res)=>{
+  //whichever user is logged in
   const owner_id = req.session.user?.user_id;
   try{
+    //get the name
     const [dogs] = await db.execute(
       `SELECT name FROM Dogs WHERE owner_id = ?`
     ,[owner_id]);
