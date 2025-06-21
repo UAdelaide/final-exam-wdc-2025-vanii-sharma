@@ -45,7 +45,7 @@ router.get('/dogs', async(req,res)=>{
       `
     ,[owner_id]);
 
-   res.status(201).json({ message: 'Walk request created', request_id: result.insertId });
+   res.status(201).json({ request_id: dogs.insertId });
   }
 
 });
