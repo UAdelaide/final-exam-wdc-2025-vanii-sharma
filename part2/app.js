@@ -12,7 +12,9 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(session({
     secret: 'dPGnkpMrwyCRxFwa4eVKUdyZnsnPCOCg',
-    resave
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }
 }));
 
 // Routes
