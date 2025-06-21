@@ -43,7 +43,6 @@ router.get('/dogs', async(req,res)=>{
       SELECT name FROM Dogs WHERE owner_id = ?
       `
     ,[owner_id]);
-
    res.status(200).json(dogs);
   } catch (error){
     console.error(error);
