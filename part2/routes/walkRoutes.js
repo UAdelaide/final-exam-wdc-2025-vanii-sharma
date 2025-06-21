@@ -41,6 +41,7 @@ router.get('/dogs', async(req,res)=>{
   const owner_id = req.session.user?.user_id;
   try{
     //get the name
+    //? placeholder for owner_id
     const [dogs] = await db.execute(
       `SELECT name FROM Dogs WHERE owner_id = ?`
     ,[owner_id]);
