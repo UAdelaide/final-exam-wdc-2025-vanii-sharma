@@ -157,6 +157,7 @@ async function logout(){
     async function dogNames(){
       try{
         const res = await fetch('/api/walks/dogs');
+        console.error(error);
         dogs.value = await res.json();
       } catch (err){
         error.value= err.message;
