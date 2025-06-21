@@ -47,8 +47,7 @@ const {owner_id} = req.body;
 
    res.status(201).json({ request_id: dogs.insertId });
   } catch (error){
-    res.status(500).json {error: 'No dog names'}
-  }
+    res.status(500).json {error: 'No dog names'}}
 
 });
 
