@@ -80,7 +80,7 @@
             message.value = '';
           }
         }
-//log out function for
+//vue function for the log out button
         async function logout(){
         try{
           const res = await fetch('/api/users/logout',{
@@ -104,6 +104,7 @@
           message,
           error,
           applyToWalk,
+          //added to the list
           logout
         };
       }
