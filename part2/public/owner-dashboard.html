@@ -120,13 +120,13 @@
           }
         }
 
-async funcilogout(){
+async function logout(){
         try{
           const res = await fetch('/api/users/logout',{
             method: 'POST'
             });
 
-       alert("out!");
+       alert("Logout Successful");
       //  window.location.reload();
        window.location.href = '/';
 
